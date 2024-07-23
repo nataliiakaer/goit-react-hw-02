@@ -1,9 +1,15 @@
-function App() {
+import Description from "./Description/Description";
+import Feedback from "./Feedback/Feedback";
+import Options from "./Options/Options";
+
+const App = () => {
   return (
     <>
-      <h1>Vite + React</h1>
+      <Description />
+      <Options />
+      <Feedback />
     </>
   );
-}
+};
 
 export default App;
