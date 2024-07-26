@@ -52,7 +52,7 @@ const App = () => {
           total={totalFeedback}
         />
       ) : (
-        <Notification total={totalFeedback}/>
+        <Notification total={totalFeedback} />
       )}
     </>
   );

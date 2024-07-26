@@ -1,0 +1,27 @@
+.list {
+  display: flex;
+  gap: 6px;
+  margin-bottom: 15px;
+}
+
+/* .item {
+  background-color: yellow;
+} */
+
+.btn {
+  border: 1px solid rgb(48, 39, 39);
+  border-radius: 8%;
+  cursor: pointer;
+}
+
+.green {
+  background-color: rgb(130, 233, 98);
+}
+
+.blue {
+  background-color: #a9e9f1;
+}
+
+.red {
+  background-color: rgb(240, 144, 144);
+}

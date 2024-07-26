@@ -1,11 +1,13 @@
+import F from "./Feedback.module.css";
+
 const Feedback = ({ good, neutral, bad, total }) => {
   return (
-    <ul>
-      <li>Good: {good}</li>
-      <li>Neutral: {neutral}</li>
-      <li>Bad: {bad}</li>
-      <li>Total: {total}</li>
-      <li>Positive: </li>
+    <ul className={F.list}>
+      <li className={F.item}>Good: {good}</li>
+      <li className={F.item}>Neutral: {neutral}</li>
+      <li className={F.item}>Bad: {bad}</li>
+      <li className={F.item}>Total: {total}</li>
+      <li className={F.item}>Positive: </li>
     </ul>
   );
 };
