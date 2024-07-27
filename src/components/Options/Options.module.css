@@ -4,14 +4,11 @@
   margin-bottom: 15px;
 }
 
-/* .item {
-  background-color: yellow;
-} */
-
 .btn {
   border: 1px solid rgb(48, 39, 39);
   border-radius: 8%;
   cursor: pointer;
+  text-transform: capitalize;
 }
 
 .green {

@@ -1,31 +1,34 @@
+import clsx from "clsx";
 import O from "./Options.module.css";
 
-const Options = ({ onGood, onNeutral, onBad }) => {
+const Options = ({ options, updateFeedback, clickOnReset, totalFeedback }) => {
   return (
     <ul className={O.list}>
-      <li className={O.item}>
-        <button
-          className={`${O.btn} ${O.green}`}
-          type="button"
-          onClick={onGood}
-        >
-          Good
-        </button>
-      </li>
-      <li className={O.item}>
-        <button className={`${O.btn} ${O.blue}`} type="button" onClick={onNeutral}>
-          Neutral
-        </button>
-      </li>
-      <li className={O.item}>
-        <button className={`${O.btn} ${O.red}`} type="button" onClick={onBad}>
-          Bad
-        </button>
-      </li>
-      {}
-      <li className={O.item}>
-        <button className={O.btn}>Reset</button>
-      </li>
+      {options.map((option) => {
+        return (
+          <li key={option} className={O.item}>
+            <button
+              className={clsx(O.btn, {
+                [O.green]: option === "good",
+                [O.blue]: option === "neutral",
+                [O.red]: option === "bad",
+              })}
+              type="button"
+              onClick={() => updateFeedback(`${option}`)}
+            >
+              {option}
+            </button>
+          </li>
+        );
+      })}
+      
+      {totalFeedback > 0 && (
+        <li className={O.item}>
+          <button className={O.btn} onClick={clickOnReset}>
+            Reset
+          </button>
+        </li>
+      )}
     </ul>
   );
 };
